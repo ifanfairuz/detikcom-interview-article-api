@@ -88,7 +88,7 @@ abstract class Handler
         cli_line(" migrate\t\t: Run database migration.");
         cli_line("   --rollback [step]\t: Arguments to rollback migration, step is the number of migrations to be reverted.");
 
-        cli_line(" seed\t\t: Run database seed.");
+        cli_line("\n seed\t\t: Run database seed.");
 
         cli_line("\n article\t\t: Get article from api and combine with data from database.\n");
         cli_line("--help to see this help.\n");
