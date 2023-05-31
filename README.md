@@ -97,7 +97,7 @@ ENDPOINTS
 }
 ```
 
-***400 Method Not Allowed***
+***400 Bad Request***
 ```
 {
     "status": 400,
@@ -113,7 +113,7 @@ ENDPOINTS
 }
 ```
 
-***406 Method Not Allowed***
+***406 Not Acceptable***
 ```
 {
     "status": 406,
