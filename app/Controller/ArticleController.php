@@ -32,6 +32,7 @@ class ArticleController extends Controller
             $repo = new Article();
             $res = $repo->insert($input);
             if ($res) {
+                $res['article_id'] = (int) $res['article_id'];
                 $res['created_at'] = date_format(date_create($res['created_at']), 'Y-m-d H:i:s');
                 return $this->jsonResponse($res);
             }
@@ -71,7 +72,7 @@ class ArticleController extends Controller
             $repo = new Article();
             $res = $repo->updateWithPrimaryKey($input, $article_id);
             if ($res) {
-                $res['article_id'] = $article_id;
+                $res['article_id'] = (int) $article_id;
                 $res['updated_at'] = date_format(date_create($res['updated_at']), 'Y-m-d H:i:s');
                 return $this->jsonResponse($res);
             }
