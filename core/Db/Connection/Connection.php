@@ -72,7 +72,6 @@ class Connection
 
             $this->con = &$con;
         } catch (\PDOException $e) {
-            dd($e);
             throw $e;
         } catch (\Exception $e) {
             throw $e;
