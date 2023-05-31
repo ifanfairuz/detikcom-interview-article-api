@@ -83,7 +83,7 @@ ENDPOINTS
 
 #### Error Response
 
-***400 Bad Request***
+***400 Bad Request*** - for InvalidValidation
 ```
 {
     "status": 400,
@@ -94,6 +94,38 @@ ENDPOINTS
         "field": "article_id",
         "message": "article_id harus diisi."
     }
+}
+```
+
+***400 Method Not Allowed***
+```
+{
+    "status": 400,
+    "message": "Bad Request"
+}
+```
+
+***405 Method Not Allowed***
+```
+{
+    "status": 405,
+    "message": "Method Not Allowed"
+}
+```
+
+***406 Method Not Allowed***
+```
+{
+    "status": 406,
+    "message": "Not Acceptable"
+}
+```
+
+***415 Unsupported Media Type***
+```
+{
+    "status": 415,
+    "message": "Unsupported Media Type"
 }
 ```
 
@@ -112,7 +144,7 @@ CLI
     $ php cli migrate
 
 
-#### Migrasi
+### Migrasi
 
 **Migrate**
 
@@ -123,8 +155,6 @@ CLI
     $ php cli migrate --rollback 2 // berarti rollback 2 step
     
 ### Seed
-
-**Seed**
 
     $ php cli seed
 
