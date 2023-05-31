@@ -36,7 +36,13 @@ class ArticleCommand
                 array_push($result, ...array_splice($apiDatas, 0, $limit - count($result)));
             }
 
-            echo json_encode(array_slice($result, 0, $limit));
+            $result = array_slice($result, 0, $limit);
+
+            if (array_key_exists('--dump', $args)) {
+                dd($result);
+            }
+
+            echo json_encode($result);
         } catch (\Exception $e) {
             cli_error($e->getMessage());
         }
