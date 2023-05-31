@@ -16,6 +16,7 @@ class SeederCommand
     {
         try {
             (new DatabaseSeeder)->run();
+            cli_success('Success seeding database.');
         } catch (\Exception $e) {
             cli_error($e->getMessage());
         }
