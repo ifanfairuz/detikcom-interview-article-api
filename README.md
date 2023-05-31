@@ -139,11 +139,6 @@ CLI
     $ php cli artikel
     $ php cli artikel --dump  // untuk mengeluarkan hasil menggunakan fungsi var_dump()
 
-**Migrate**
-
-    $ php cli migrate
-
-
 ### Migrasi
 
 **Migrate**
