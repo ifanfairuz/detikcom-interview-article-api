@@ -83,7 +83,7 @@ ENDPOINTS
 
 #### Error Response
 
-***400 Bad Request***
+***400 Bad Request*** - for InvalidValidation
 ```
 {
     "status": 400,
@@ -97,6 +97,38 @@ ENDPOINTS
 }
 ```
 
+***400 Bad Request***
+```
+{
+    "status": 400,
+    "message": "Bad Request"
+}
+```
+
+***405 Method Not Allowed***
+```
+{
+    "status": 405,
+    "message": "Method Not Allowed"
+}
+```
+
+***406 Not Acceptable***
+```
+{
+    "status": 406,
+    "message": "Not Acceptable"
+}
+```
+
+***415 Unsupported Media Type***
+```
+{
+    "status": 415,
+    "message": "Unsupported Media Type"
+}
+```
+
 CLI
 ------------
 
@@ -107,12 +139,7 @@ CLI
     $ php cli artikel
     $ php cli artikel --dump  // untuk mengeluarkan hasil menggunakan fungsi var_dump()
 
-**Migrate**
-
-    $ php cli migrate
-
-
-#### Migrasi
+### Migrasi
 
 **Migrate**
 
@@ -123,8 +150,6 @@ CLI
     $ php cli migrate --rollback 2 // berarti rollback 2 step
     
 ### Seed
-
-**Seed**
 
     $ php cli seed
 
